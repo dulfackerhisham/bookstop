@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+  <br>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h3 class="card-title">title: {{book.title}}</h3>
+      <p class="card-text">author: {{book.author}}</p>
+      <a href="{% url 'bookview' %}" class="btn btn-primary">Go back</a>
+      <a href="{% url 'deletebook' book.id %}" class="btn btn-danger">Delete book</a>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
